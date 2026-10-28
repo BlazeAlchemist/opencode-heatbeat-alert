@@ -6,7 +6,9 @@ Saved: 2026-10-28 (local timezone +08:00).
 
 - The advanced A/D detection research is **PAUSED** at the user's request. Do not resume experiments, change algorithms, or port prototypes without a new request.
 - Latest request: "push to https://github.com/BlazeAlchemist/opencode-heatbeat-alert"
-- Authorized destination: `https://github.com/BlazeAlchemist/opencode-heatbeat-alert.git`. Remote inspection returned no refs. Git initialization and publication are being prepared; see the latest session log entry for the outcome.
+- Git initialized on branch `chore/save-session-state`, with `origin` set to `https://github.com/BlazeAlchemist/opencode-heatbeat-alert.git`. Remote inspection returned no refs. Initial snapshot commit: `b8d3d56` (`chore: save chart implementation and paused research state`).
+- **Push blocked by authentication**: `git push --set-upstream origin chore/save-session-state` failed with `could not read Username for 'https://github.com': terminal prompts disabled`. No successful publication has been confirmed. No credentials were available in this session; external home-directory credential stores were not inspected.
+- Commits use the explicit agent identity `OpenCode <opencode@localhost>`; no user identity was guessed and no global Git settings were changed. This checkpoint/status update is saved in a follow-up local commit.
 - `.gitignore` excludes virtual environments, build output, scratch data, caches, credential files, machine-local `opencode.json`, and the local `session.txt` pointer. Sources, docs, role definitions, logs, and saved chart images are retained. A heuristic secret scan of candidate text files returned no findings; this is not a guarantee of complete secret detection.
 
 ## Read first
@@ -62,3 +64,13 @@ Confirmed by source inspection during checkpointing; left unchanged because rese
 ## Suggested next-session prompt
 
 "Read RULES.md, SESSION_STATE.md, and BACKLOG_AD_RESEARCH.md. Keep A/D research paused. Check Git status and the latest session log for publication status before doing further work."
+
+## Finish publication
+
+From this project directory, authenticate using your normal GitHub workflow, then run:
+
+```sh
+git push -u origin chore/save-session-state
+```
+
+If GitHub CLI is already installed, an interactive terminal can use `gh auth login` followed by `gh auth setup-git` before pushing. Do not paste credentials into chat or embed them in the remote URL. No force push is authorized or needed.

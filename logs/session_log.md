@@ -726,4 +726,20 @@ Rust CLI tool at `src/rust/` that fetches Yahoo Finance data and generates candl
   - Heuristically scanned 25 candidate text files for credential patterns; no matches were reported. This does not guarantee absence of every kind of secret.
   - Added `.gitignore` to exclude local environments/dependencies, builds, caches, scratch data, credential patterns, machine-local `opencode.json`, and `session.txt`. Saved charts remain publishable.
   - Updated `SESSION_STATE.md` with the authorized destination and publication-in-progress status. Research and source code remain unchanged; no build/tests or Yahoo requests were run.
-- **Publication outcome**: Pending Git initialization, commit, and push below.
+- **Input/Content (progress)**: The local snapshot is committed, but the push is blocked because no GitHub credentials are available to this session. I’ll record the blocker in the checkpoint so you can finish after signing in.
+- **Actions Taken (Git publication)**:
+  - Initialized Git on `chore/save-session-state` with an empty template, configured the authorized repository as `origin`, and explicitly staged 33 reviewed project files, including seven PNGs. Local connection configuration, the virtual environment, build outputs, and scratch data were excluded.
+  - `git diff --cached --check` reported one existing trailing space at `RULES.md:33`; the user's rules file was left unchanged.
+  - Created initial commit `b8d3d56` (`chore: save chart implementation and paused research state`) using explicit agent identity `OpenCode <opencode@localhost>`, without changing global Git identity or signing settings.
+  - Attempted `git push --set-upstream origin chore/save-session-state`. It failed with `fatal: could not read Username for 'https://github.com': terminal prompts disabled`. No successful publication is confirmed; no force push or credential-store inspection was attempted.
+  - Updated the checkpoint and this log with the authentication blocker and manual completion instructions, then saved those documentation changes in a follow-up local commit. Research remains paused.
+- **Publication outcome**: Saved and committed locally; push blocked by missing GitHub authentication.
+- **Input/Content (final)**: Saved and committed locally on `chore/save-session-state`. Push is blocked by missing GitHub authentication.
+
+  After signing in to GitHub, run:
+
+  ```sh
+  git push -u origin chore/save-session-state
+  ```
+
+  Resume instructions are in `SESSION_STATE.md`.
