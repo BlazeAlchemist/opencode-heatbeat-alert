@@ -1,0 +1,26 @@
+# Local environments, dependencies, build output, and scratch data
+/venv/
+/.venv/
+**/node_modules/
+**/target/
+**/__pycache__/
+*.py[cod]
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+/tmp/
+
+# Machine-local connection configuration and session pointers
+/opencode.json
+/session.txt
+
+# Credentials and editor-local files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+*.swp
