@@ -743,3 +743,26 @@ Rust CLI tool at `src/rust/` that fetches Yahoo Finance data and generates candl
   ```
 
   Resume instructions are in `SESSION_STATE.md`.
+
+### Turn 50 — Verify user's publication to main
+- **Timestamp**: 2026-10-28T22:39:27+08:00
+- **Speaker**: USER
+- **Input/Content**: i push to main instead. as error due to empty repo.
+- **Speaker**: AGENT
+- **Actions Taken**:
+  - Ran `git status --short --branch`, `git branch -vv`, and `git ls-remote --symref origin HEAD refs/heads/main refs/heads/chore/save-session-state`, with system/global Git configuration disabled as before.
+  - Confirmed local `main` tracks `origin/main` at `40a746b422995683929b83569e33cfea166e60ee`; GitHub `main` and remote HEAD point to the same commit. Working tree was clean before the documentation updates below. The local `list` branch was left unchanged.
+  - Updated `SESSION_STATE.md` to supersede the historical authentication blocker with verified publication on `main`. Clarified that the previous agent error was missing credentials, not an empty repository.
+  - Saved this log entry. These documentation edits remain local and uncommitted; no further commit or push was attempted. Research remains paused; no source changes, builds, or tests were needed.
+- **Input/Content (final)**: Confirmed: GitHub `main` is at `40a746b`, matching your local branch. Resume notes are updated locally.
+
+  The earlier error was authentication-related, not caused by an empty repository.
+
+### Turn 51 — Commit and push remaining changes
+- **Timestamp**: 2026-11-12T19:59:57+08:00
+- **Speaker**: USER
+- **Input/Content**: commit and push all to remote.
+- **Speaker**: AGENT
+- **Input/Content (progress)**: I’ll check the current changes, then commit and push them to the configured remote.
+- **Input/Content (subsequent user message)**: commit and push all to remote.
+- **Actions Taken**: Checked Git status and remote; the only changes were the earlier resume checkpoint and session log updates. Updated the checkpoint and this log, then attempted to commit and push them to `origin/main`. Research remains paused.

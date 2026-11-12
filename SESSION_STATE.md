@@ -5,10 +5,12 @@ Saved: 2026-10-28 (local timezone +08:00).
 ## User intent and stopping point
 
 - The advanced A/D detection research is **PAUSED** at the user's request. Do not resume experiments, change algorithms, or port prototypes without a new request.
-- Latest request: "push to https://github.com/BlazeAlchemist/opencode-heatbeat-alert"
-- Git initialized on branch `chore/save-session-state`, with `origin` set to `https://github.com/BlazeAlchemist/opencode-heatbeat-alert.git`. Remote inspection returned no refs. Initial snapshot commit: `b8d3d56` (`chore: save chart implementation and paused research state`).
-- **Push blocked by authentication**: `git push --set-upstream origin chore/save-session-state` failed with `could not read Username for 'https://github.com': terminal prompts disabled`. No successful publication has been confirmed. No credentials were available in this session; external home-directory credential stores were not inspected.
-- Commits use the explicit agent identity `OpenCode <opencode@localhost>`; no user identity was guessed and no global Git settings were changed. This checkpoint/status update is saved in a follow-up local commit.
+- Latest user update: "i push to main instead. as error due to empty repo."
+- **Publication confirmed** on 2026-10-28: GitHub `refs/heads/main` and remote HEAD both point to `40a746b422995683929b83569e33cfea166e60ee`. Local `main` is at the same commit and tracks `origin/main`. Origin is `https://github.com/BlazeAlchemist/opencode-heatbeat-alert.git`.
+- Published commits: `b8d3d56` (`chore: save chart implementation and paused research state`) and `40a746b` (`docs: record resume checkpoint and Git authentication blocker`). The blocker described in that historical commit is superseded by this verification of the user's successful push.
+- The earlier agent push failed because credentials were unavailable (`could not read Username ... terminal prompts disabled`), not because the repository was empty. External home-directory credential stores were not inspected.
+- Existing commits use the explicit agent identity `OpenCode <opencode@localhost>`; no user identity was guessed and no global Git settings were changed. A local branch named `list` also exists and was left untouched.
+- The publication-status correction and session log update are being committed and pushed at the user's request; check `git status` and the remote for the current outcome.
 - `.gitignore` excludes virtual environments, build output, scratch data, caches, credential files, machine-local `opencode.json`, and the local `session.txt` pointer. Sources, docs, role definitions, logs, and saved chart images are retained. A heuristic secret scan of candidate text files returned no findings; this is not a guarantee of complete secret detection.
 
 ## Read first
@@ -65,12 +67,12 @@ Confirmed by source inspection during checkpointing; left unchanged because rese
 
 "Read RULES.md, SESSION_STATE.md, and BACKLOG_AD_RESEARCH.md. Keep A/D research paused. Check Git status and the latest session log for publication status before doing further work."
 
-## Finish publication
+## Publication reference
 
-From this project directory, authenticate using your normal GitHub workflow, then run:
+Publication of the saved implementation/research snapshot is complete on `main`. For future authorized updates, after reviewing and committing local changes, use:
 
 ```sh
-git push -u origin chore/save-session-state
+git push origin main
 ```
 
-If GitHub CLI is already installed, an interactive terminal can use `gh auth login` followed by `gh auth setup-git` before pushing. Do not paste credentials into chat or embed them in the remote URL. No force push is authorized or needed.
+Do not paste credentials into chat or embed them in the remote URL. No force push is authorized or needed.
